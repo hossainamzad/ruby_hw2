@@ -34,18 +34,22 @@ class Elevator
 	end	
 		
 	def up
-				if user_input ==a
-			for i in @floor..10
-				puts i
-			end	
-				
+		@floor = @floor + 1
+		self.greet
 	end	
+	
+	def down
+		@floor -=1
+		self.greet
+	end	
+	
 		
 	def greet
-				"Welcome to the Elevator. You are currently on the  #{@floor}th floor."
+		puts "Welcome to the Elevator. You are currently on the  #{@floor}th floor."
 	end	
+
 	def music
-		"listen to some music. It is on."
+		puts  "listen to some music. It is on."
 	end	
 
 end		
